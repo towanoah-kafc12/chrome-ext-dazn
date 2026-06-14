@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DAZN Player Wide View",
+  "description": "DAZNの動画プレイヤーをウィンドウ横幅いっぱいに近づけます。",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.dazn.com/*",
+        "https://dazn.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
