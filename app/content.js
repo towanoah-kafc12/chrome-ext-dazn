@@ -4,6 +4,9 @@
   const CANDIDATE_CLASS = "dazn-wide-player-candidate";
   const MAX_PARENT_STEPS = 6;
   const DEFAULT_ASPECT_RATIO = 16 / 9;
+  const MIN_PLAYER_WIDTH = 320;
+  const PLAYER_LAYOUT_SELECTOR = '[data-target="player-layout"]';
+  const SIDE_BAR_SELECTOR = '[data-test-id="SIDE_BAR"]';
   let scheduled = false;
 
   function scheduleApply() {
@@ -41,15 +44,24 @@
 
   function updateSizingVariables(video) {
     const headerHeight = getHeaderHeight();
-    const availableHeight = Math.max(window.innerHeight - headerHeight, 320);
+    const availableHeight = Math.max(window.innerHeight - headerHeight, MIN_PLAYER_WIDTH);
     const aspectRatio = getVideoAspectRatio(video);
     const maxWidthByHeight = Math.floor(availableHeight * aspectRatio);
-    const playerWidth = Math.min(window.innerWidth, maxWidthByHeight);
+    const usableLayoutWidth = getUsablePlayerLayoutWidth(video);
+    const playerWidth = Math.max(MIN_PLAYER_WIDTH, Math.floor(Math.min(usableLayoutWidth, maxWidthByHeight)));
 
-    document.documentElement.style.setProperty("--dazn-wide-player-header-height", `${headerHeight}px`);
-    document.documentElement.style.setProperty("--dazn-wide-player-available-height", `${availableHeight}px`);
-    document.documentElement.style.setProperty("--dazn-wide-player-width", `${playerWidth}px`);
-    document.documentElement.style.setProperty("--dazn-wide-player-half-width", `${playerWidth / 2}px`);
+    setRootCssVariable("--dazn-wide-player-header-height", `${headerHeight}px`);
+    setRootCssVariable("--dazn-wide-player-available-height", `${availableHeight}px`);
+    setRootCssVariable("--dazn-wide-player-width", `${playerWidth}px`);
+    setRootCssVariable("--dazn-wide-player-half-width", `${playerWidth / 2}px`);
+  }
+
+  function setRootCssVariable(name, value) {
+    if (document.documentElement.style.getPropertyValue(name) === value) {
+      return;
+    }
+
+    document.documentElement.style.setProperty(name, value);
   }
 
   function getHeaderHeight() {
@@ -75,6 +87,157 @@
     }
 
     return DEFAULT_ASPECT_RATIO;
+  }
+
+  function getUsablePlayerLayoutWidth(video) {
+    const playerLayout = getPlayerLayout(video);
+    const baseWidth = getAvailableLayoutWidth(playerLayout);
+    const sideBarOverlapWidth = getPlayerSideBarOverlapWidth(playerLayout);
+
+    return Math.max(MIN_PLAYER_WIDTH, baseWidth - sideBarOverlapWidth);
+  }
+
+  function getPlayerLayout(video) {
+    return video.closest(PLAYER_LAYOUT_SELECTOR) || document.querySelector(PLAYER_LAYOUT_SELECTOR);
+  }
+
+  function getAvailableLayoutWidth(playerLayout) {
+    if (!playerLayout) {
+      return window.innerWidth;
+    }
+
+    const parent = playerLayout.parentElement;
+
+    if (!parent) {
+      return getElementWidth(playerLayout) || window.innerWidth;
+    }
+
+    const parentWidth = getContentBoxWidth(parent);
+
+    if (parentWidth <= 0) {
+      return getElementWidth(playerLayout) || window.innerWidth;
+    }
+
+    const visibleSiblings = Array.from(parent.children).filter((element) => {
+      return element !== playerLayout && isVisibleElement(element);
+    });
+
+    if (visibleSiblings.length === 0) {
+      return parentWidth;
+    }
+
+    const siblingWidth = visibleSiblings.reduce((total, element) => total + getElementWidth(element), 0);
+    const parentStyle = window.getComputedStyle(parent);
+    const gap = getFlexGap(parentStyle);
+    const totalGap = gap * visibleSiblings.length;
+
+    return Math.max(MIN_PLAYER_WIDTH, parentWidth - siblingWidth - totalGap);
+  }
+
+  function getPlayerSideBarOverlapWidth(playerLayout) {
+    if (!playerLayout) {
+      return 0;
+    }
+
+    const layoutRect = playerLayout.getBoundingClientRect();
+
+    if (layoutRect.width <= 0 || layoutRect.height <= 0) {
+      return 0;
+    }
+
+    const sideBars = Array.from(document.querySelectorAll(SIDE_BAR_SELECTOR));
+
+    return sideBars.reduce((maxOverlapWidth, sideBar) => {
+      if (!isActiveSideBar(sideBar)) {
+        return maxOverlapWidth;
+      }
+
+      return Math.max(maxOverlapWidth, getSideBarOverlapWidth(sideBar, layoutRect));
+    }, 0);
+  }
+
+  function isActiveSideBar(sideBar) {
+    const menuType = sideBar.getAttribute("data-menu-type");
+    const subMenuType = sideBar.getAttribute("data-sub-menu-type");
+
+    return Boolean(
+      sideBar.classList.contains("hasAnyMenu") ||
+        (menuType && menuType !== "NONE") ||
+        (subMenuType && subMenuType !== "NONE") ||
+        sideBar.querySelector('[aria-hidden="false"]')
+    );
+  }
+
+  function getSideBarOverlapWidth(sideBar, layoutRect) {
+    const candidates = [
+      sideBar,
+      ...sideBar.querySelectorAll('aside, [role="dialog"], [role="menu"], [aria-hidden="false"]')
+    ];
+
+    return candidates.reduce((maxOverlapWidth, element) => {
+      if (!isVisibleElement(element)) {
+        return maxOverlapWidth;
+      }
+
+      const rect = element.getBoundingClientRect();
+
+      if (isFullPlayerOverlay(rect, layoutRect)) {
+        return maxOverlapWidth;
+      }
+
+      const overlapWidth = getHorizontalOverlapWidth(rect, layoutRect);
+
+      return Math.max(maxOverlapWidth, overlapWidth);
+    }, 0);
+  }
+
+  function isFullPlayerOverlay(rect, layoutRect) {
+    return rect.width >= layoutRect.width * 0.9 && rect.height >= layoutRect.height * 0.9;
+  }
+
+  function getHorizontalOverlapWidth(rect, targetRect) {
+    const overlapLeft = Math.max(rect.left, targetRect.left);
+    const overlapRight = Math.min(rect.right, targetRect.right);
+
+    return Math.max(0, overlapRight - overlapLeft);
+  }
+
+  function getContentBoxWidth(element) {
+    const rect = element.getBoundingClientRect();
+
+    if (rect.width <= 0) {
+      return 0;
+    }
+
+    const style = window.getComputedStyle(element);
+    const paddingLeft = parsePixelValue(style.paddingLeft);
+    const paddingRight = parsePixelValue(style.paddingRight);
+
+    return Math.max(0, rect.width - paddingLeft - paddingRight);
+  }
+
+  function getElementWidth(element) {
+    return Math.max(0, element.getBoundingClientRect().width);
+  }
+
+  function getFlexGap(style) {
+    return parsePixelValue(style.columnGap || style.gap);
+  }
+
+  function parsePixelValue(value) {
+    const parsed = Number.parseFloat(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+
+  function isVisibleElement(element) {
+    const rect = element.getBoundingClientRect();
+
+    if (rect.width <= 0 || rect.height <= 0) {
+      return false;
+    }
+
+    const style = window.getComputedStyle(element);
+    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0";
   }
 
   function markLikelyPlayerContainers(video) {
@@ -116,11 +279,14 @@
   const observer = new MutationObserver(scheduleApply);
 
   observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["aria-expanded", "aria-hidden", "class", "data-menu-type", "data-sub-menu-type", "style"],
     childList: true,
     subtree: true
   });
 
   window.addEventListener("resize", scheduleApply, { passive: true });
   window.addEventListener("loadedmetadata", scheduleApply, true);
+  document.addEventListener("transitionend", scheduleApply, true);
   scheduleApply();
 })();
