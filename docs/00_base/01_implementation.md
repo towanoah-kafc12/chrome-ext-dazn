@@ -41,8 +41,9 @@
 - `app/` をChromeに読み込ませる拡張ルートにする。
 - `app/manifest.json` にManifest V3設定とDAZN向けcontent scriptを定義する。
 - `app/content.js` で `video` 要素を検出し、動画プレイヤー周辺の要素へCSSクラスを付与する。
-- `app/content.css` で付与されたクラスに対し、横幅最大化のCSSを適用する。
-- DOM変更と画面リサイズに追従するため、`MutationObserver` と `resize` イベントで再適用する。
+- `app/content.css` で付与されたクラスに対し、横幅最大化と高さ上限のCSSを適用する。
+- `app/content.js` でDAZNヘッダーの高さと動画アスペクト比を計算し、ヘッダーを除いた表示可能領域を超えない最大幅をCSS変数として渡す。
+- DOM変更と画面リサイズ、動画メタデータ読み込みに追従するため、`MutationObserver`、`resize` イベント、`loadedmetadata` イベントで再適用する。
 
 ### データ設計方針
 
