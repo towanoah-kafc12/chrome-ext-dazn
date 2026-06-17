@@ -1,0 +1,2336 @@
+.schedule__schedule-container___3z45q{
+    padding-left:16px;
+    padding-right:16px;
+    max-width:1210px
+}
+
+.schedule__schedule-container___3z45q article{
+    padding:0;
+}
+
+@media (max-width: 767px){
+
+    .schedule__schedule-container___3z45q{
+        padding-left:16px;
+        padding-right:16px
+    }
+}
+
+@media (min-width: 1025px){
+
+    .schedule__schedule-container___3z45q{
+        padding-left:64px;
+        padding-right:64px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .schedule__schedule-container___3z45q{
+        padding-left:16px;
+        padding-right:16px;
+        margin-left:auto;
+        margin-right:auto
+    }
+}
+
+.schedule__schedule-container___3z45q [data-test-id="CONTAINER"]{
+    border-radius:10px;
+}
+
+@media (min-width: 1025px){
+
+    .schedule__schedule-container___3z45q [data-test-id="CONTAINER"]{
+        padding-bottom:0;
+        width:90%;
+        left:10%
+    }
+}
+
+@media (min-width: 1025px){
+
+    .schedule__schedule-container___3z45q ul{
+        left:10%
+    }
+}
+
+.schedule__event-matches-container___3WGwC{
+    padding:32px 40px;
+    background-color:#0c161c;
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__event-matches-container___3WGwC{
+        padding:32px 16px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__event-matches-container___3WGwC{
+        padding:20px 12px
+    }
+}
+
+.schedule__event-matches-container___3WGwC :last-child{
+    border-bottom:0;
+}
+
+.schedule__event-matches___3fixJ{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:24px;
+    gap:24px;
+    background-color:#0c161c;
+    border-bottom:1px solid rgb(36, 45, 51);
+    border-radius:8px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    padding:16px 0 22px;
+}
+
+@media (max-width: 767px){
+
+    .schedule__event-matches___3fixJ{
+        flex-direction:column;
+        grid-gap:12px;
+        gap:12px
+    }
+}
+
+.schedule__event-matches___3fixJ:last-child{
+    padding-bottom:0;
+}
+
+.schedule__opponent-one-details___tLIgH{
+    position:relative;
+    bottom:-6px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__opponent-one-details___tLIgH{
+        position:unset
+    }
+}
+
+.schedule__player-image-container___1tpMN{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:baseline;
+    justify-content:flex-start;
+    position:relative
+}
+
+.schedule__player-image-container___1tpMN.schedule__has-player-id___mawkE{
+    cursor:pointer;
+}
+
+.schedule__player-image-container___1tpMN.schedule__second-image___1rYGu{
+    justify-content:flex-end;
+}
+
+.schedule__player-image___3V0I1{
+    width:126px;
+    height:130px;
+    -o-object-fit:cover;
+       object-fit:cover;
+    border-radius:8px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#242d33), to(rgba(36, 45, 51, 0))),
+        -webkit-gradient(linear, left top, left bottom, from(#323d44), to(#242d33));
+    background:linear-gradient(180deg, #242d33 0%, rgba(36, 45, 51, 0) 100%),
+        linear-gradient(180deg, #323d44 0%, #242d33 100%);
+}
+
+@media (max-width: 1024px){
+
+    .schedule__player-image___3V0I1{
+        width:112px;
+        height:112px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__player-image___3V0I1{
+        width:88px;
+        height:88px
+    }
+}
+
+.schedule__player-details___2CM7j{
+    flex:1;
+}
+
+@media (max-width: 767px){
+
+    .schedule__player-details___2CM7j{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:inherit
+    }
+}
+
+.schedule__type___3RiGe{
+    font-family:var(--font-family-normal);
+    font-size:16px;
+    font-weight:400;
+    line-height:20px;
+    letter-spacing:0;
+    text-align:center;
+}
+
+@media (max-width: 767px){
+
+    .schedule__type___3RiGe{
+        font-size:14px;
+        margin-left:24px;
+        margin-right:24px;
+        text-align:center
+    }
+}
+
+.schedule__players___1yd1n{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    margin-top:36px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__players___1yd1n{
+        margin-top:19px
+    }
+}
+
+.schedule__name___32ndU{
+    font-family:var(--font-family-normal);
+    font-size:24px;
+    font-weight:700;
+    line-height:28.8px;
+    letter-spacing:0;
+    text-align:left;
+    color:var(--color-chalk);
+}
+
+@media (max-width: 1024px){
+
+    .schedule__name___32ndU{
+        font-size:20px;
+        line-height:24px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__name___32ndU{
+        font-size:16px;
+        line-height:19.2px
+    }
+}
+
+.schedule__opponent-name2___3NYf9{
+    font-family:var(--font-family-normal);
+    font-size:24px;
+    font-weight:700;
+    line-height:28.8px;
+    letter-spacing:0;
+    text-align:right;
+    color:var(--color-chalk);
+}
+
+@media (max-width: 1024px){
+
+    .schedule__opponent-name2___3NYf9{
+        font-size:18px;
+        line-height:21.6px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__opponent-name2___3NYf9{
+        font-size:16px;
+        line-height:19.2px
+    }
+}
+
+.schedule__vs-div___2CrOs{
+    width:10%;
+}
+
+@media (max-width: 767px){
+
+    .schedule__vs-div___2CrOs{
+        width:100%;
+        margin-top:12px
+    }
+}
+
+.schedule__player-detail___2FSH9{
+    width:45%;
+}
+
+@media (max-width: 767px){
+
+    .schedule__player-detail___2FSH9{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__mobile-design-player-two-detail___17UWh{
+        align-items:end
+    }
+}
+
+.schedule__vs___2Xp5Y{
+    font-family:var(--font-family-normal);
+    font-size:24px;
+    font-weight:400;
+    line-height:28.8px;
+    letter-spacing:0;
+    text-align:center;
+    color:var(--color-chalk);
+}
+
+@media (max-width: 767px){
+
+    .schedule__vs___2Xp5Y{
+        font-size:20px;
+        line-height:24px;
+        text-align:center
+    }
+}
+
+.schedule__country___D7_Om{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:space-between;
+    margin-top:14px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__country___D7_Om{
+        margin-top:8px
+    }
+}
+
+.schedule__country-detail___gzfQl{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    grid-gap:8px;
+    gap:8px;
+    padding:8px;
+    background-color:rgba(249, 250, 250, 0.10196);
+    border-radius:4px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__country-detail___gzfQl{
+        width:62px;
+        height:28px;
+        margin-top:8px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__country-detail___gzfQl{
+        margin-top:8px;
+        width:62px
+    }
+}
+
+.schedule__country-image___1XQbm{
+    width:23px;
+    height:17px;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__country-image___1XQbm{
+        width:20px;
+        height:12px
+    }
+}
+
+.schedule__country-name___2JSmy{
+    font-family:var(--font-family-normal);
+    font-size:14px;
+    font-weight:400;
+    line-height:20px;
+    letter-spacing:0;
+    text-align:left;
+    color:#f0f2f2;
+}
+
+.schedule__mobile-deisgn-upper___yGiQc{
+    display:contents;
+}
+
+@media (max-width: 767px){
+
+    .schedule__mobile-deisgn-upper___yGiQc{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center
+    }
+}
+
+.schedule__mobile-design-player-detail___3waVB{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.schedule__country-detail-mobile___1MH36{
+    float:right;
+}
+
+.schedule__place-holder-image___3ATs9{
+    width:126px;
+    height:130px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#242d33), to(rgba(36, 45, 51, 0))),
+        -webkit-gradient(linear, left top, left bottom, from(#323d44), to(#242d33));
+    background:linear-gradient(180deg, #242d33 0%, rgba(36, 45, 51, 0) 100%),
+        linear-gradient(180deg, #323d44 0%, #242d33 100%);
+    border-radius:8px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    -o-object-fit:cover;
+       object-fit:cover;
+    position:absolute;
+}
+
+@media (max-width: 1024px){
+
+    .schedule__place-holder-image___3ATs9{
+        width:112px;
+        height:112px
+    }
+}
+
+@media (max-width: 767px){
+
+    .schedule__place-holder-image___3ATs9{
+        width:88px;
+        height:88px
+    }
+}
+
+.schedule__place-holder-image___3ATs9 svg{
+    width:60px;
+    height:60px;
+}
+
+.schedule__place-holder-image___3ATs9 .schedule__preload-image___1-NRs{
+    display:none;
+}
+
+.schedule__logo___3eRcu{
+    fill:var(--color-tarmac-light-20);
+    width:50%;
+    height:50%;
+}
+
+.schedule__hidden___1xk13{
+    visibility:hidden;
+    opacity:0;
+}
+
+.schedule__spinner___2kstO{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.nfl-tickets__wrapper___1yLx2{
+    padding:24px 64px;
+    position:relative;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__wrapper___1yLx2{
+        padding:16px;
+    }
+}
+
+.nfl-tickets__title-section___2ONsQ{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.nfl-tickets__main-title___d111q{
+    color:var(--color-chalk);
+    text-align:center;
+    font-family:var(--font-family-normal);
+    font-size:24px;
+    font-style:normal;
+    font-weight:700;
+    line-height:132%;
+}
+
+.nfl-tickets__main-description___kT3Oa{
+    color:var(--color-dark-30);
+    text-align:center;
+    font-family:var(--font-family-normal);
+    font-size:14px;
+    font-style:normal;
+    font-weight:400;
+    line-height:20px;
+}
+
+.nfl-tickets__container___2LYk6{
+    max-width:1340px;
+    margin:auto;
+    padding:45px 50px;
+    border-radius:20px;
+    border:1px solid #242d33;
+    border:1px solid var(--brand-ebony, #242d33);
+    font-family:var(--font-family-normal);
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__container___2LYk6{
+        padding:25px 30px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__container___2LYk6{
+        padding:24px 14px;
+        border:none;
+    }
+}
+
+.nfl-tickets__header___3nnU4{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:100px;
+    gap:100px;
+    border-bottom:1px solid #242d33;
+    border-bottom:1px solid var(--brand-ebony, #242d33);
+    padding-bottom:30px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__header___3nnU4{
+        grid-gap:16px;
+        gap:16px;
+        flex-direction:column;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__header___3nnU4 article{
+        width:100%;
+    }
+}
+
+.nfl-tickets__header___3nnU4 article p{
+    color:var(--color-dark-20);
+    font-size:18px;
+    font-style:normal;
+    font-weight:400;
+    line-height:26px;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__header___3nnU4 article p{
+        font-size:14px;
+        line-height:20px;
+    }
+}
+
+.nfl-tickets__header___3nnU4 article p:nth-child(2){
+    margin-top:20px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__header___3nnU4 article p:nth-child(2){
+        margin-top:10px;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__header___3nnU4 article:not(:first-child) p{
+        margin-top:10px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:36px;
+    gap:36px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+@media (max-width: 1200px){
+
+    .nfl-tickets__matches___3Yn2g{
+        margin-top:30px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB{
+    width:calc(33.33333% - 24px);
+}
+
+@media (max-width: 1200px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB{
+        width:calc(50% - 18px);
+    }
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB{
+        width:100%;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__location___BcL05{
+    color:#ffffff;
+    font-size:24px;
+    font-style:normal;
+    font-weight:800;
+    line-height:normal;
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match-container___ECBHL{
+    border-radius:10px;
+    background:#0c161c;
+    margin-top:22px;
+    padding:6px 16px 24px;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match-container___ECBHL{
+        margin-top:10px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:20px;
+    gap:20px;
+    border-radius:10px;
+    background:rgba(36, 45, 51, .3);
+    padding:8px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM{
+        grid-gap:16px;
+        gap:16px;
+        align-items:center;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM .nfl-tickets__match-logo___1CRQ7{
+    width:133px;
+    height:74px;
+    -o-object-fit:cover;
+       object-fit:cover;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM .nfl-tickets__match-logo___1CRQ7{
+        width:114px;
+        height:65px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM .nfl-tickets__match-title___1reZd{
+    color:#ffffff;
+    font-size:18px;
+    font-style:normal;
+    font-weight:800;
+    line-height:normal;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM .nfl-tickets__match-title___1reZd{
+        font-size:14px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__match___2nAKM .nfl-tickets__match-venue___2N2x5{
+    color:#f7ff1a;
+    color:var(--color-yellow, #f7ff1a);
+    font-size:12px;
+    font-style:normal;
+    font-weight:400;
+    line-height:normal;
+    margin-top:5px;
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-categories-container___22m0j{
+    padding-top:12px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-categories-container___22m0j{
+        padding-top:0;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    padding:15px 16px;
+    grid-gap:10px;
+    gap:10px;
+    margin-top:20px;
+    border-radius:4px;
+    border:1px solid #14222a;
+    width:100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe{
+        width:48%;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe{
+        margin-top:14px;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-price___3G9Gy{
+    color:#ffffff;
+    font-size:24px;
+    font-style:normal;
+    font-weight:800;
+    line-height:20px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-price___3G9Gy{
+        font-size:18px;
+        line-height:16px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-price___3G9Gy{
+        font-size:16px;
+        line-height:normal;
+    }
+}
+
+.nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-title___qpZZ1{
+    color:#9ea2a4;
+    color:var(--brand-concrete, #9ea2a4);
+    font-size:18px;
+    font-style:normal;
+    line-height:20px;
+    flex:1;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-title___qpZZ1{
+        font-size:16px;
+        line-height:18px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__matches___3Yn2g .nfl-tickets__ticket-group___262ZB .nfl-tickets__ticket-category___1YYCe .nfl-tickets__ticket-category-title___qpZZ1{
+        font-size:14px;
+        line-height:normal;
+    }
+}
+
+.nfl-tickets__footer___1RPIT{
+    margin-top:78px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__footer___1RPIT{
+        margin-top:68px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__footer___1RPIT{
+        margin-top:16px;
+    }
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:10px;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-text___ed3M5{
+    flex:1;
+    color:var(--color-chalk);
+    font-size:18px;
+    font-style:normal;
+    font-weight:400;
+    line-height:20px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-text___ed3M5{
+        font-size:14px;
+        line-height:16px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-text___ed3M5{
+        font-size:12px;
+        line-height:normal;
+    }
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-button___-WK8I{
+    border-radius:6px;
+    background:var(--color-tarmac-light-20);
+    min-width:138px;
+    min-height:36px;
+    padding:10px;
+    color:#f9fafa;
+    color:var(--brand-chalk, #f9fafa);
+    text-align:center;
+    font-size:14px;
+    font-style:normal;
+    font-weight:700;
+    line-height:21.333px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-button___-WK8I:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__footer___1RPIT .nfl-tickets__confirmation___2IPDi .nfl-tickets__confirmation-button___-WK8I{
+        width:100%;
+        margin-top:24px;
+    }
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__disclaimer___6XEKy{
+    margin-top:38px;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__footer___1RPIT .nfl-tickets__disclaimer___6XEKy{
+        margin-top:26px;
+    }
+}
+
+.nfl-tickets__footer___1RPIT .nfl-tickets__disclaimer___6XEKy .nfl-tickets__footer-text___a9Tuz{
+    color:var(--color-dark-20);
+    font-size:14px;
+    font-style:normal;
+    font-weight:400;
+    line-height:22px;
+    margin-bottom:0;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+    grid-gap:10px;
+    gap:10px;
+}
+
+@media (max-width: 1024px){
+
+    .nfl-tickets__footer___1RPIT .nfl-tickets__disclaimer___6XEKy .nfl-tickets__footer-text___a9Tuz{
+        font-size:12px;
+        line-height:20px;
+    }
+}
+
+.nfl-tickets__confirmation-popup-container___16NgB{
+    background-color:var(--color-smoke);
+    width:600px;
+    padding:24px;
+    padding-top:50px;
+    border-radius:8px;
+    text-align:center;
+}
+
+@media (max-width: 768px){
+
+    .nfl-tickets__confirmation-popup-container___16NgB{
+        width:100%;
+    }
+}
+
+.nfl-tickets__confirmation-popup-container___16NgB h1,
+    .nfl-tickets__confirmation-popup-container___16NgB h2,
+    .nfl-tickets__confirmation-popup-container___16NgB h3{
+    color:#ffffff;
+    font-family:var(--font-family-normal);
+    font-size:24px;
+    font-style:normal;
+    font-weight:600;
+    line-height:24px;
+    margin-bottom:24px;
+}
+
+.nfl-tickets__confirmation-popup-container___16NgB p{
+    color:#ffffff;
+    font-family:var(--font-family-normal);
+    font-size:14px;
+    font-style:normal;
+    font-weight:400;
+    line-height:24px;
+    margin-bottom:10px;
+}
+
+.nfl-tickets__artcle-full___1UBBG{
+    width:100%;
+}
+
+.nfl-tickets__article-half___31x0e{
+    width:50%;
+}
+
+.nfl-tickets__loader-container___3_JDz{
+    height:100vh;
+    width:100vw;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@keyframes allgenresportsmodal__slide-up___Yr51U{
+
+    from{
+        transform:translateY(100%);
+    }
+
+    to{
+        transform:translateY(0);
+    }
+}
+
+.allgenresportsmodal__container___2vBXo{
+    width:656px;
+    overflow:hidden;
+    border-radius:16px;
+    border:1px solid var(--color-tarmac-light-20);
+    background-color:var(--color-smoke);
+}
+
+@media (max-width: 767px){
+
+    .allgenresportsmodal__container___2vBXo{
+        width:100%;
+        animation:allgenresportsmodal__slide-up___Yr51U 0.5s ease-in-out;
+        border-radius:0;
+        border:none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+    .allgenresportsmodal__container___2vBXo{
+        width:95%;
+        display:block;
+        margin:0 auto;
+    }
+}
+
+.allgenresportsmodal__all-sports___1wGYr{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+}
+
+.allgenresportsmodal__left-icon___1kgwj{
+    transform:rotate(180deg);
+    width:24px;
+    height:24px;
+    fill:#f9fafa;
+}
+
+.allgenresportsmodal__all-sport-title___1V3ud{
+    color:var(--color-white);
+    font-family:var(--font-family-normal);
+    font-size:16px;
+    font-style:normal;
+    font-weight:700;
+    line-height:24px;
+}
+
+.allgenresportsmodal__all-sports-menu-container___TBwvw{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+    grid-gap:16px;
+    gap:16px;
+    margin-top:30px;
+    margin-bottom:12px;
+    overflow-y:auto;
+    height:calc(100vh - 83px);
+    background-color:var(--color-tarmac);
+    width:90%;
+    margin:30px auto 12px;
+    border-radius:10px;
+    align-items:center;
+}
+
+.allgenresportsmodal__all-sports-menu-container___TBwvw:last-child{
+    border-bottom:unset;
+}
+
+.allgenresportsmodal__sport-details___PY06N{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+    cursor:pointer;
+    border-bottom:1px solid var(--color-tarmac-light-10);
+    width:90%;
+}
+
+.allgenresportsmodal__sport-detail___39cKs{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    grid-gap:6px;
+    gap:6px;
+    justify-content:center;
+    align-items:center;
+}
+
+.allgenresportsmodal__icon-image___377nf{
+    width:24px;
+    height:24px;
+}
+
+.allgenresportsmodal__right-icon___3zQjg{
+    width:24px;
+    height:24px;
+    fill:#f9fafa;
+}
+
+.allgenresportsmodal__title___1FmjF{
+    font-size:14px;
+    font-style:normal;
+    font-weight:600;
+    line-height:normal;
+    color:var(--color-white);
+    font-family:var(--font-family-normal);
+}
+
+.allgenresportsmodal__place-holder-icon___PU-0n{
+    height:24px;
+    width:24px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#323d44), to(rgba(36, 45, 51, 0))),
+        -webkit-gradient(linear, left top, left bottom, from(#242d33), to(#323d44));
+    background:linear-gradient(180deg, #323d44 0%, rgba(36, 45, 51, 0) 100%),
+        linear-gradient(180deg, #242d33 0%, #323d44 100%);
+    border-radius:100%;
+}
+
+.allgenresportsmodal__place-holder-icon___PU-0n .allgenresportsmodal__preload-image___P6jQv{
+    display:none;
+}
+
+.allgenresportsmodal__dropdown-active-tab___3s4ni{
+    background-color:var(--color-tarmac-light-20);
+    color:#f0f2f2;
+}
+
+@keyframes live-tv__logo-animation___oLLs2{
+
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes live-tv__spin___rWewx{
+
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.live-tv__default-spinnner___3PY87{
+    top:40%;
+    left:50%;
+    position:absolute;
+}
+
+.live-tv__skeleton-banner___1w2xi{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#080e12;
+    width:100%;
+    height:450px
+}
+
+.live-tv__skeleton-banner___1w2xi svg{
+    fill:#3d4549;
+    height:160px;
+    width:160px;
+    animation-name:live-tv__logo-animation___oLLs2;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+}
+
+.live-tv__skeleton-banner-native-app___2Uk9I{
+    background-color:#0c161c;
+}
+
+.live-tv__live-tv-banner-wrapper___23yuu{
+    width:100%;
+    margin-top:8px;
+    padding-left:188px;
+    padding-right:188px;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-banner-wrapper___23yuu{
+        padding-left:32px;
+        padding-right:32px;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-banner-wrapper___23yuu{
+        padding-left:16px;
+        padding-right:16px;
+    }
+}
+
+.live-tv__live-tv-banner-container___3kM-o{
+    overflow:hidden;
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-gap:96px;
+    gap:96px;
+    margin-bottom:24px;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-banner-container___3kM-o{
+        flex-direction:column;
+        grid-gap:16px;
+        gap:16px;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-banner-container___3kM-o{
+        margin-bottom:0px;
+        grid-gap:12px;
+        gap:12px;
+    }
+}
+
+.live-tv__epg-video-section___yrgAy{
+    width:60%;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative
+}
+
+.live-tv__epg-video-section___yrgAy.live-tv__hidden___1jVOB{
+    display:none;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__epg-video-section___yrgAy{
+        width:100%;
+    }
+}
+
+.live-tv__live-tv-banner-image___2ce_a{
+    width:60%;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative
+}
+
+.live-tv__live-tv-banner-image___2ce_a::before{
+    content:'';
+    display:block;
+    padding-top:56.25%;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-banner-image___2ce_a{
+        width:100%;
+    }
+}
+
+.live-tv__live-tv-video-meta-data___1Ff_-{
+    width:100%;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-video-meta-data___1Ff_-{
+        border-bottom:1px solid rgba(255, 255, 255, .20);
+        padding-bottom:16px;
+        order:2;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-video-meta-data___1Ff_-{
+        border-bottom:none;
+        padding-bottom:0px;
+        margin-top:2px;
+        margin-bottom:6px;
+        order:4;
+    }
+}
+
+.live-tv__live-tv-competition-mobile___3tJ02{
+    display:none;
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-competition-mobile___3tJ02{
+        display:block;
+        width:100%;
+        order:2;
+    }
+}
+
+.live-tv__live-banner-no-channels___2_6SJ{
+    min-height:250px;
+}
+
+@media (min-width: 768px){
+
+    .live-tv__live-banner-no-channels___2_6SJ{
+        min-height:450px;
+    }
+}
+
+@keyframes live-tv__fade-in___1tOIU{
+
+    0%{
+        opacity:0;
+        transform:scale(1.45);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-banner-background___3w8Nm img{
+        -o-object-fit:cover;
+           object-fit:cover;
+        -o-object-position:center;
+           object-position:center;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-banner-background___3w8Nm img{
+        -o-object-fit:contain;
+           object-fit:contain;
+        position:absolute;
+        bottom:60px;
+    }
+}
+
+.live-tv__live-tv-banner-metadata___36X2w{
+    box-sizing:content-box;
+    position:relative;
+    width:40%;
+    z-index:6;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-banner-metadata___36X2w{
+        width:100%;
+        order:3;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-banner-metadata___36X2w{
+        order:3;
+    }
+}
+
+@media (min-width: 768px){
+
+    .live-tv__live-tv-data-no-channels___2rtyY{
+        top:50%;
+    }
+}
+
+@keyframes live-tv__slide-up___CCM4X{
+
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.live-tv__description___3kgC9>p{
+    text-overflow:ellipsis;
+    font-size:16px;
+    line-height:155%;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+
+}
+
+@media (max-width: 767px){
+
+    .live-tv__description___3kgC9>p{
+        font-size:14px;
+    }
+}
+
+.live-tv__label___1TKR9{
+    display:inline-block;
+    font-family:var(--font-family-normal);
+    color:var(--color-chalk);
+    font-size:16px;
+    font-weight:700;
+    opacity:0;
+    animation:live-tv__slide-up___CCM4X 0.5s linear;
+    animation-fill-mode:forwards;
+    line-height:32px;
+    margin-bottom:8px;
+}
+
+.live-tv__info___3Jxsb{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    -webkit-column-gap:16px;
+       -moz-column-gap:16px;
+            grid-column-gap:16px;
+            column-gap:16px;
+    margin-bottom:8px;
+    opacity:0;
+    animation:live-tv__slide-up___CCM4X 0.5s linear;
+    animation-fill-mode:forwards;
+    animation-delay:0.2s
+}
+
+.live-tv__info___3Jxsb .live-tv__text___5W6zG{
+    font-family:var(--font-family-normal);
+    color:var(--color-tarmac-light-80);
+    font-size:16px;
+    font-weight:700;
+    line-height:32px;
+    text-wrap:nowrap;
+}
+
+.live-tv__info___3Jxsb .live-tv__date___6hzO5{
+    font-family:var(--font-family-normal);
+    color:var(--color-tarmac-light-80);
+    font-size:16px;
+    font-weight:700;
+    line-height:32px;
+    text-wrap:nowrap;
+}
+
+.live-tv__info___3Jxsb .live-tv__info-label___35XrD{
+    height:20px;
+    font-family:var(--font-family-normal);
+    font-weight:700;
+    color:var(--color-tarmac);
+    background-color:var(--color-chalk);
+    border:1px solid var(--color-tarmac);
+    border-radius:4px;
+    padding:0 4px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-wrap:nowrap;
+}
+
+.live-tv__live-tv-channels___AhSuS{
+    padding-right:30px
+}
+
+.live-tv__live-tv-channels___AhSuS.live-tv__isRTL___zfFCg{
+    padding-left:30px;
+    padding-right:unset;
+}
+
+.live-tv__live-tv-channels___AhSuS{
+
+    .tp-tab{
+        color:var(--tp-soft-iron-550);
+    }
+
+    .tp-tab-active{
+        color:var(--tp-full-black-1000);
+    }
+}
+
+.live-tv__channel___1y5dW{
+    border-radius:9999px;
+    padding:6px 16px;
+    background-color:#242d33;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:fit-content;
+    cursor:pointer;
+    grid-gap:6px;
+    gap:6px;
+    white-space:nowrap;
+    color:#f0f2f2;
+}
+
+.live-tv__icon-image___37uTv{
+    width:24px;
+    height:24px;
+    -o-object-fit:contain;
+       object-fit:contain;
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1 0 0 0 0 0 1.01 0 0 0 0 0 1 0 0 0 0 0 1 0" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78 0.21999999999999997" /><feFuncG type="table" tableValues="0.78 0.21999999999999997" /><feFuncB type="table" tableValues="0.78 0.21999999999999997" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.9514400000000001 0.06152000000000002 0.015119999999999995 0 0 0.02792 0.9748800000000001 0.013440000000000007 0 0 0.02176 0.04271999999999998 0.9304800000000001 0 0 0 0 0 1 0" /><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="2.05458 -0.9580999999999998 -0.09648 0 0 -0.28542 1.4053 -0.09648 0 0 -0.28542 -0.9580999999999998 2.24352 0 0 0 0 0 1 0" /><feColorMatrix type="hueRotate" color-interpolation-filters="sRGB" values="152" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.92" /><feFuncG type="linear" slope="0.92" /><feFuncB type="linear" slope="0.92" /></feComponentTransfer><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.87" intercept="0.065" /><feFuncG type="linear" slope="0.87" intercept="0.065" /><feFuncB type="linear" slope="0.87" intercept="0.065" /></feComponentTransfer></filter></svg>#filter');
+    filter:brightness(0) saturate(100%) invert(78%) sepia(8%) saturate(234%) hue-rotate(152deg) brightness(92%) contrast(87%);
+}
+
+.live-tv__channel-title___1Zo7T{
+    font-size:14px;
+    font-family:var(--font-family-normal);
+    line-height:19.32px;
+    font-weight:700;
+}
+
+.live-tv__icon___9MzSj{
+    width:24px;
+    height:24px;
+    display:block;
+    margin:inherit;
+}
+
+.live-tv__active-tab___28ywl{
+    background-color:var(--color-dark-20);
+    color:var(--color-smoke);
+}
+
+.live-tv__invert-kayo-icon___1AbzC img,
+    .live-tv__invert-kayo-icon___1AbzC svg{
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.63 0.37" /><feFuncG type="table" tableValues="0.63 0.37" /><feFuncB type="table" tableValues="0.63 0.37" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.40514 0.75362 0.18522 0 0 0.34202 0.69228 0.16464 0 0 0.26656 0.52332 0.14838 0 0 0 0 0 1 0" /><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="4.39197 -3.08165 -0.31031999999999993 0 0 -0.91803 2.28145 -0.31031999999999993 0 0 -0.91803 -3.08165 4.99968 0 0 0 0 0 1 0" /><feColorMatrix type="hueRotate" color-interpolation-filters="sRGB" values="86" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.5" /><feFuncG type="linear" slope="1.5" /><feFuncB type="linear" slope="1.5" /></feComponentTransfer><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" intercept="0" /><feFuncG type="linear" slope="1" intercept="0" /><feFuncB type="linear" slope="1" intercept="0" /></feComponentTransfer></filter></svg>#filter');
+    filter:invert(63%) sepia(98%) saturate(531%) hue-rotate(86deg) brightness(150%) contrast(100%);
+}
+
+.live-tv__icon-invert___3q9hO{
+    mix-blend-mode:difference;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN{
+    flex-direction:row;
+    width:72px;
+    justify-content:space-between;
+    align-items:center
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN.live-tv__fixture-redesign-page___3rRGl{
+    margin-right:0px;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN.live-tv__isRTL___zfFCg{
+    margin-right:unset;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN.live-tv__isRTL___zfFCg.live-tv__fixture-redesign-page___3rRGl{
+    margin-right:0px;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN.live-tv__isRTL___zfFCg .live-tv__prev-button___1C5yn{
+    margin-left:4px;
+    margin-right:unset;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn,
+    .live-tv__live-channels-scroll-buttons___lvHHN .live-tv__next-button___PwxxJ{
+    width:32px;
+    height:32px;
+    border-radius:100%;
+    border:0.5px solid rgba(249, 250, 250, 0.2);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(8, 14, 18, .64);
+    cursor:pointer;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn svg,.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__next-button___PwxxJ svg{
+    fill:#ffffff;
+    width:6px;
+    height:9px;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn:hover,.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__next-button___PwxxJ:hover{
+    opacity:0.75;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn.live-tv__disabled___1RiDL,.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__next-button___PwxxJ.live-tv__disabled___1RiDL{
+    opacity:0.25;
+    cursor:default;
+    pointer-events:none;
+}
+
+@media (max-width: 600px){
+
+    .live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn,
+    .live-tv__live-channels-scroll-buttons___lvHHN .live-tv__next-button___PwxxJ{
+        display:none;
+    }
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn{
+    margin-right:4px;
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN .live-tv__prev-button___1C5yn svg{
+    transform:rotate(180deg);
+}
+
+.live-tv__live-channels-scroll-buttons___lvHHN{
+    display:none;
+
+    body[dir="rtl"] & .live-tv__next-button___PwxxJ svg{
+        transform:rotate(180deg);
+    }
+
+    body[dir="rtl"] & .live-tv__prev-button___1C5yn svg{
+        transform:rotate(0deg);
+    }
+}
+
+@media (min-width: 1025px){
+
+    .live-tv__live-channels-scroll-buttons___lvHHN{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+    }
+}
+
+.live-tv__channel-pill-container___3uFZn{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    overflow-x:scroll;
+    grid-gap:8px;
+    gap:8px;
+}
+
+.live-tv__channel-pill-container___3uFZn::-webkit-scrollbar{
+    display:none;
+}
+
+.live-tv__live-tv-main___2--zi{
+    width:100%;
+    margin-top:26px;
+    overflow:hidden;
+    padding-left:188px;
+    padding-right:188px;
+}
+
+@media (max-width: 1024px){
+
+    .live-tv__live-tv-main___2--zi{
+        padding-left:32px;
+        padding-right:32px;
+        margin-top:0px;
+    }
+}
+
+@media (max-width: 767px){
+
+    .live-tv__live-tv-main___2--zi{
+        margin-top:12px;
+        padding-left:16px;
+        padding-right:16px;
+    }
+}
+
+.live-tv__genre-with-channel___37uWx{
+    position:relative;
+    z-index:2;
+}
+
+.live-tv__genres-more-sports-chevron___w16kD{
+    width:20px;
+    height:20px;
+    fill:#f0f2f2;
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1 0 0 0 0 0 1.01 0 0 0 0 0 1 0 0 0 0 0 1 0" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78 0.21999999999999997" /><feFuncG type="table" tableValues="0.78 0.21999999999999997" /><feFuncB type="table" tableValues="0.78 0.21999999999999997" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.9514400000000001 0.06152000000000002 0.015119999999999995 0 0 0.02792 0.9748800000000001 0.013440000000000007 0 0 0.02176 0.04271999999999998 0.9304800000000001 0 0 0 0 0 1 0" /><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="2.05458 -0.9580999999999998 -0.09648 0 0 -0.28542 1.4053 -0.09648 0 0 -0.28542 -0.9580999999999998 2.24352 0 0 0 0 0 1 0" /><feColorMatrix type="hueRotate" color-interpolation-filters="sRGB" values="152" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.92" /><feFuncG type="linear" slope="0.92" /><feFuncB type="linear" slope="0.92" /></feComponentTransfer><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.87" intercept="0.065" /><feFuncG type="linear" slope="0.87" intercept="0.065" /><feFuncB type="linear" slope="0.87" intercept="0.065" /></feComponentTransfer></filter></svg>#filter');
+    filter:brightness(0) saturate(100%) invert(78%) sepia(8%) saturate(234%) hue-rotate(152deg) brightness(92%) contrast(87%);
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0{
+    background:#242d33;
+    min-width:272px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+    white-space:nowrap;
+    border-radius:6px;
+    z-index:12;
+    color:#f0f2f2;
+    margin-top:5px;
+    position:fixed;
+    max-height:320px;
+    overflow:auto;
+}
+
+.live-tv__genre-more-sports-dropdown-v2___2r5zR{
+    left:60px !important;
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0::-webkit-scrollbar{
+    width:4px;
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0::-webkit-scrollbar-thumb{
+    height:10%;
+    background-color:#f0f2f2;
+    border-radius:10px;
+}
+
+.live-tv__genre-more-sport___BGZ6H{
+    justify-content:flex-start;
+    border:1px solid var(--color-tarmac-light-10);
+    height:40px;
+    padding:8.91px 13.37px;
+    background-color:var(--color-tarmac-light-10);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    grid-gap:5.5px;
+    gap:5.5px;
+    white-space:nowrap;
+    color:#f0f2f2;
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0 .live-tv__active-tab___28ywl:first-child{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    background-color:var(--color-dark-20);
+    color:var(--color-smoke);
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0 .live-tv__active-tab___28ywl:last-child{
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    background-color:var(--color-dark-20);
+    color:var(--color-smoke);
+}
+
+.live-tv__genre-more-sports-dropdown___1C1u0 .live-tv__active-tab___28ywl{
+    background-color:var(--color-dark-20);
+    color:var(--color-smoke);
+}
+
+.live-tv__genre-more-sport___BGZ6H:not(.live-tv__active-tab___28ywl):hover{
+    background-color:#3d4549;
+    cursor:pointer;
+}
+
+.live-tv__genre-more-sport___BGZ6H:last-child:hover{
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    background-color:#3d4549;
+    border-color:#3d4549;
+    opacity:1;
+}
+
+.live-tv__genre-more-sport___BGZ6H:first-child:hover{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+}
+
+.live-tv__prev-disabled___1CMiJ{
+    opacity:0.25;
+    pointer-events:none;
+}
+
+.live-tv__next-disabled___2s68H{
+    opacity:0.25;
+    pointer-events:none;
+}
+
+.live-tv__more-sports___XjzHO{
+    height:44px;
+}
+
+@media (max-width: 1023px){
+
+    .live-tv__more-sports___XjzHO{
+        margin-right:20px;
+    }
+}
+
+.live-tv__place-holder-icon___2dVaK{
+    height:24px;
+    width:24px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#323d44), to(rgba(36, 45, 51, 0))),
+        -webkit-gradient(linear, left top, left bottom, from(#242d33), to(#323d44));
+    background:linear-gradient(180deg, #323d44 0%, rgba(36, 45, 51, 0) 100%),
+        linear-gradient(180deg, #242d33 0%, #323d44 100%);
+    border-radius:4px;
+}
+
+.live-tv__hidden___1jVOB{
+    visibility:hidden;
+    opacity:0;
+}
+
+.live-tv__hidden-icon___2b3Sn{
+    display:none;
+}
+
+.live-tv__livetv-spinner___2s5Cd{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+}
+
+.live-tv__live-tv-content___10_88{
+    padding-top:24px;
+    width:100%;
+}
+.styles__myShowsTitle___3csQq{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-gap:5px;
+    gap:5px;
+}
+
+.styles__betaTag___GEwXo{
+    color:white;
+    padding:2px 8px;
+    font-size:x-small;
+    text-transform:uppercase;
+    border-radius:9999px;
+    border-radius:var(--round-corners-radius-full, 9999px);
+    border:1px solid transparent;
+    background:-webkit-gradient(linear, left top, left bottom, from(#0b0b0b), to(#0b0b0b)) padding-box, conic-gradient(from 268deg at 50% 50%, #d9d9d9 18deg, #c79ad9 30deg, #d58db9 45deg, #FFAA00 158deg, #FFFA00 177deg, #FFAA00 221deg, #d58db9 336deg, #d9d9d9 350deg) border-box;
+    background:linear-gradient(#0b0b0b, #0b0b0b) padding-box, conic-gradient(from 268deg at 50%, at 50%, #d9d9d9 18deg, #c79ad9 30deg, #d58db9 45deg, #FFAA00 158deg, #FFFA00 177deg, #FFAA00 221deg, #d58db9 336deg, #d9d9d9 350deg) border-box;
+    background:linear-gradient(#0b0b0b, #0b0b0b) padding-box, conic-gradient(from 268deg at 50% 50%, #d9d9d9 18deg, #c79ad9 30deg, #d58db9 45deg, #FFAA00 158deg, #FFFA00 177deg, #FFAA00 221deg, #d58db9 336deg, #d9d9d9 350deg) border-box
+}
+.catalog-ad-blocker-popup__special___10xuR{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-chalk);
+    font-family:var(--font-family-special);
+}
+
+.catalog-ad-blocker-popup__special-bold___1xatb{
+    font-weight:bold;
+}
+
+.catalog-ad-blocker-popup__normal___3JImD{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-chalk);
+    font-family:var(--font-family-normal);
+}
+
+.catalog-ad-blocker-popup__body___2Eivr{
+    font-size:var(--font-size-body);
+}
+
+.catalog-ad-blocker-popup__body-small___1_OGM{
+    font-size:var(--font-size-body-small);
+}
+
+.catalog-ad-blocker-popup__menu-item___3vpf5{
+    color:var(--color-tarmac-light-60);
+    font-size:var(--font-size-menu-item);
+    font-weight:bold;
+    text-align:left;
+    -webkit-tap-highlight-color:var(--color-transparent-black);
+}
+
+.catalog-ad-blocker-popup__rail-title___32C0z{
+    font-size:var(--font-size-rail-title);
+    font-weight:800;
+    text-shadow:0 2px 4px color(var(--color-tarmac) a(0.5));
+    line-height:var(--line-height-1);
+}
+
+.catalog-ad-blocker-popup__tile-title___35asX{
+    font-weight:bold;
+    text-shadow:var(--tile-text-shadow);
+    font-size:var(--font-size-tile-title);
+    line-height:var(--line-height-1);
+}
+
+.catalog-ad-blocker-popup__tile-metadata___OauD8{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-tarmac-light-70);
+    font-family:var(--font-family-normal);
+    font-weight:bold;
+    text-shadow:var(--tile-text-shadow);
+    font-size:var(--font-size-tile-metadata);
+    line-height:var(--line-height-1);
+}
+
+.catalog-ad-blocker-popup__tile-label___14hPl{
+    font-weight:800;
+    font-size:var(--font-size-tile-label);
+    font-family:var(--font-family-normal);
+    margin-right:5px;
+}
+
+.catalog-ad-blocker-popup__footer-item-title___Wjn5f{
+    font-size:var(--font-size-navigation-item);
+    font-weight:normal;
+    line-height:2.5;
+}
+
+.catalog-ad-blocker-popup__up-next-card-title___3HbKa{
+    font-weight:600;
+}
+
+.catalog-ad-blocker-popup__info-title___3xwGG{
+    font-size:var(--font-size-info-title);
+    font-weight:bold;
+}
+
+.catalog-ad-blocker-popup__ellipsis___2eny7{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.catalog-ad-blocker-popup__button-label___4oY23{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    font-family:var(--font-family-special);
+    font-weight:600;
+    font-size:var(--font-size-6);
+    text-transform:uppercase;
+}
+
+.catalog-ad-blocker-popup__button-label-small___telda{
+    font-size:var(--font-size-8);
+}
+
+.catalog-ad-blocker-popup__container___EQ7Sz{
+    background-color:var(--color-white);
+    width:402px;
+    bottom:24px;
+    right:24px;
+    z-index:var(--notification-z-index);
+    position:fixed;
+    color:var(--color-tarmac);
+    padding:18px;
+}
+
+.catalog-ad-blocker-popup__header___GdgQ5{
+    font-weight:var(--font-weight-semi-bold);
+    font-size:21px;
+}
+
+.catalog-ad-blocker-popup__text___3yj7Q{
+    font-weight:var(--font-weight-normal);
+    margin-top:24px;
+    margin-bottom:24px;
+    font-size:20px;
+}
+
+.catalog-ad-blocker-popup__text-inline___3HJNj{
+    font-weight:var(--font-weight-normal);
+    font-size:20px;
+    margin-top:24px;
+}
+
+.catalog-ad-blocker-popup__link-more-info___1846S{
+    color:inherit;
+    background:none;
+    text-decoration:underline;
+    margin-bottom:8px;
+    display:inline;
+    font-size:20px;
+    margin-left:3px;
+    font-weight:var(--font-weight-normal);
+}
+
+[dir="ltr"] .catalog-ad-blocker-popup__instructions-list___xJocq{
+            margin-left:20px;
+}
+
+[dir="rtl"] .catalog-ad-blocker-popup__instructions-list___xJocq{
+            margin-right:20px;
+}
+
+.catalog-ad-blocker-popup__instructions-list___xJocq{
+    font-weight:var(--font-weight-normal);
+    margin-top:27px;
+    margin-bottom:18px;
+    font-size:18px;
+    -webkit-margin-start:20px;
+}
+
+.catalog-ad-blocker-popup__list-item___26InT{
+    margin-top:27px;
+    font-size:19px;
+}
+
+.catalog-ad-blocker-popup__show-how-link___1vjj9{
+    background-color:var(--color-tarmac);
+    color:var(--color-white);
+    font-weight:var(--font-weight-semi-bold);
+    font-family:var(--font-family-special);
+    padding:16px 32px;
+    font-size:20px;
+    border:none;
+    width:100%;
+    cursor:pointer;
+    bottom:0;
+    margin-top:32px;
+    display:block;
+    text-align:center;
+}
+
+.catalog-ad-blocker-popup__back-button___4ehf0{
+    display:inline-block;
+    font-weight:var(--font-weight-semi-bold);
+    font-family:var(--font-family-special);
+    padding:16px 32px;
+    border:none;
+    width:100%;
+    cursor:pointer;
+    bottom:0;
+    color:inherit;
+    background-color:inherit;
+    font-size:20px;
+}
+
+.catalog-ad-blocker-popup__close-popup-button___1X3qK{
+    border:none;
+    background-color:inherit;
+    cursor:pointer;
+    position:absolute;
+    right:24px;
+    top:24px;
+    width:14px;
+    height:14px;
+    stroke:var(--color-tarmac);
+    stroke-width:12;
+}
+
+.app__special___1GD6M{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-chalk);
+    font-family:var(--font-family-special);
+}
+
+.app__special-bold___2fWLV{
+    font-weight:bold;
+}
+
+.app__normal___VVu7S{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-chalk);
+    font-family:var(--font-family-normal);
+}
+
+.app__body___1xs77{
+    font-size:var(--font-size-body);
+}
+
+.app__body-small___3VCx0{
+    font-size:var(--font-size-body-small);
+}
+
+.app__menu-item___1MpPk{
+    color:var(--color-tarmac-light-60);
+    font-size:var(--font-size-menu-item);
+    font-weight:bold;
+    text-align:left;
+    -webkit-tap-highlight-color:var(--color-transparent-black);
+}
+
+.app__rail-title___2qL8r{
+    font-size:var(--font-size-rail-title);
+    font-weight:800;
+    text-shadow:0 2px 4px color(var(--color-tarmac) a(0.5));
+    line-height:var(--line-height-1);
+}
+
+.app__tile-title___3AVSJ{
+    font-weight:bold;
+    text-shadow:var(--tile-text-shadow);
+    font-size:var(--font-size-tile-title);
+    line-height:var(--line-height-1);
+}
+
+.app__tile-metadata___XDtbp{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    color:var(--color-tarmac-light-70);
+    font-family:var(--font-family-normal);
+    font-weight:bold;
+    text-shadow:var(--tile-text-shadow);
+    font-size:var(--font-size-tile-metadata);
+    line-height:var(--line-height-1);
+}
+
+.app__tile-label___9OAUZ{
+    font-weight:800;
+    font-size:var(--font-size-tile-label);
+    font-family:var(--font-family-normal);
+    margin-right:5px;
+}
+
+.app__footer-item-title___DqCWG{
+    font-size:var(--font-size-navigation-item);
+    font-weight:normal;
+    line-height:2.5;
+}
+
+.app__up-next-card-title___2_FJ4{
+    font-weight:600;
+}
+
+.app__info-title___3yKOD{
+    font-size:var(--font-size-info-title);
+    font-weight:bold;
+}
+
+.app__ellipsis___16l9e{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.app__button-label___3dtzi{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    font-family:var(--font-family-special);
+    font-weight:600;
+    font-size:var(--font-size-6);
+    text-transform:uppercase;
+}
+
+.app__button-label-small___20IIp{
+    font-size:var(--font-size-8);
+}
+
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+html,
+body{
+    height:100%;
+    background-color:var(--color-smoke);
+}
+
+body{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:greyscale;
+    margin:0;
+    color:var(--color-chalk);
+    font-family:var(--font-family-normal);
+    font-size:var(--font-size-body);
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+a{
+    color:var(--color-tarmac-light-60);
+    text-decoration:none;
+}
+
+body.is-modal-open{
+    overflow:hidden !important;
+}
+
+.app__flex-wrapper___-loiX{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+}
+
+.app__main___29ydb{
+    min-height:100vh;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+    background-color:var(--color-smoke)
+}
+
+.app__main___29ydb.app__is-pure-native-app-styles___7B_x_{
+    min-height:unset;
+}
+
+.app__page___2izsC{
+    position:relative;
+    background-color:var(--color-smoke);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-direction:column;
+    flex:1 0 auto;
+}
+
+.app__page-with-no-header___36QUc{
+    flex:0 0 auto;
+}
+
+.app__notification___2WrP5{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex:1 0 auto;
+}
+
+.app__hidden___21R67{
+    display:none;
+}
+
+::-webkit-scrollbar{
+    position:absolute;
+    z-index:9999;
+    width:2px;
+}
+
+::-webkit-scrollbar-track{
+    display:none;
+    background:#333333;
+}
+
+::-webkit-scrollbar-track:hover{
+    display:display;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#666666;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#555555;
+}
+
+.app__fake-div___3_Ar7{
+    height:0;
+}
+
+.app__native-app-margin___XXgqQ{
+    height:32px;
+    background-color:var(--color-smoke) !important;
+}
+
+.app__hob-background-color-for-native-app___1NpRc{
+    background-color:var(--color-smoke);
+}
+
+.app__smartTvAppNotAvailable___yuIsA{
+    padding-top:80px;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:100vw 100vh;
+    background-position:center;
+    padding-left:80px;
+
+    .app__dazn-logo___2G7JE{
+        height:72px;
+        width:72px;
+        fill:#ffffff;
+    }
+
+    .app__content-container___3yRSa{
+        margin-top:292px;
+        margin-left:48px;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        flex-direction:column;
+        grid-gap:28px;
+        gap:28px;
+    }
+
+    .app__headline___3o1O8{
+        color:var(--color-chalk);
+        font-family:var(--font-family-normal);
+        font-size:51px;
+        font-style:normal;
+        font-weight:800;
+        line-height:120%;
+    }
+
+    .app__description___14vKE{
+        color:var(--color-tarmac-light-80);
+        font-family:var(--font-family-normal);
+        font-size:24px;
+        font-style:normal;
+        font-weight:400;
+        line-height:normal;
+    }
+}
+

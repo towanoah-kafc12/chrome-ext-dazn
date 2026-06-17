@@ -2,6 +2,20 @@ html.dazn-wide-player-root .dazn-wide-player-candidate {
   max-width: none !important;
 }
 
+html.dazn-wide-player-root [data-test-id="HEADER"],
+html.dazn-wide-player-root header {
+  position: static !important;
+  top: auto !important;
+}
+
+html.dazn-wide-player-root [data-test-id="SIDE_BAR"] {
+  width: var(--dazn-wide-player-sidebar-width, 72px) !important;
+  min-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
+  max-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
+  flex-basis: var(--dazn-wide-player-sidebar-width, 72px) !important;
+  overflow: visible !important;
+}
+
 html.dazn-wide-player-root [data-target="player-layout"] {
   width: var(--dazn-wide-player-width, auto) !important;
   max-width: 100% !important;

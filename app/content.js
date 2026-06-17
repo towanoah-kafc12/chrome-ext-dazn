@@ -8,6 +8,7 @@
   const PLAYER_LAYOUT_SELECTOR = '[data-target="player-layout"]';
   const SIDE_BAR_SELECTOR = '[data-test-id="SIDE_BAR"]';
   let scheduled = false;
+  let lockedSideBarWidth = 0;
 
   function scheduleApply() {
     if (scheduled) {
@@ -32,6 +33,7 @@
       }
 
       updateSizingVariables(videos[0]);
+      updateSideBarVariables();
 
       for (const video of videos) {
         video.classList.add(PLAYER_CLASS);
@@ -64,15 +66,33 @@
     document.documentElement.style.setProperty(name, value);
   }
 
+  function updateSideBarVariables() {
+    const sideBar = document.querySelector(SIDE_BAR_SELECTOR);
+
+    if (!sideBar) {
+      return;
+    }
+
+    if (lockedSideBarWidth === 0) {
+      lockedSideBarWidth = Math.max(MIN_PLAYER_WIDTH / 8, Math.ceil(getElementWidth(sideBar)));
+    }
+
+    setRootCssVariable("--dazn-wide-player-sidebar-width", `${lockedSideBarWidth}px`);
+  }
+
   function getHeaderHeight() {
     const header = document.querySelector('[data-test-id="HEADER"], header');
 
-    if (!header) {
+    if (!header || isStaticHeader(header)) {
       return 0;
     }
 
     const rect = header.getBoundingClientRect();
     return Math.max(0, Math.ceil(rect.height));
+  }
+
+  function isStaticHeader(header) {
+    return window.getComputedStyle(header).position === "static";
   }
 
   function getVideoAspectRatio(video) {
@@ -92,9 +112,8 @@
   function getUsablePlayerLayoutWidth(video) {
     const playerLayout = getPlayerLayout(video);
     const baseWidth = getAvailableLayoutWidth(playerLayout);
-    const sideBarOverlapWidth = getPlayerSideBarOverlapWidth(playerLayout);
 
-    return Math.max(MIN_PLAYER_WIDTH, baseWidth - sideBarOverlapWidth);
+    return Math.max(MIN_PLAYER_WIDTH, baseWidth);
   }
 
   function getPlayerLayout(video) {
@@ -119,7 +138,7 @@
     }
 
     const visibleSiblings = Array.from(parent.children).filter((element) => {
-      return element !== playerLayout && isVisibleElement(element);
+      return element !== playerLayout && isLayoutBlockingSibling(element);
     });
 
     if (visibleSiblings.length === 0) {
@@ -134,72 +153,18 @@
     return Math.max(MIN_PLAYER_WIDTH, parentWidth - siblingWidth - totalGap);
   }
 
-  function getPlayerSideBarOverlapWidth(playerLayout) {
-    if (!playerLayout) {
-      return 0;
+  function isLayoutBlockingSibling(element) {
+    if (!isVisibleElement(element)) {
+      return false;
     }
 
-    const layoutRect = playerLayout.getBoundingClientRect();
+    const style = window.getComputedStyle(element);
 
-    if (layoutRect.width <= 0 || layoutRect.height <= 0) {
-      return 0;
+    if (style.position === "fixed" || style.position === "absolute") {
+      return false;
     }
 
-    const sideBars = Array.from(document.querySelectorAll(SIDE_BAR_SELECTOR));
-
-    return sideBars.reduce((maxOverlapWidth, sideBar) => {
-      if (!isActiveSideBar(sideBar)) {
-        return maxOverlapWidth;
-      }
-
-      return Math.max(maxOverlapWidth, getSideBarOverlapWidth(sideBar, layoutRect));
-    }, 0);
-  }
-
-  function isActiveSideBar(sideBar) {
-    const menuType = sideBar.getAttribute("data-menu-type");
-    const subMenuType = sideBar.getAttribute("data-sub-menu-type");
-
-    return Boolean(
-      sideBar.classList.contains("hasAnyMenu") ||
-        (menuType && menuType !== "NONE") ||
-        (subMenuType && subMenuType !== "NONE") ||
-        sideBar.querySelector('[aria-hidden="false"]')
-    );
-  }
-
-  function getSideBarOverlapWidth(sideBar, layoutRect) {
-    const candidates = [
-      sideBar,
-      ...sideBar.querySelectorAll('aside, [role="dialog"], [role="menu"], [aria-hidden="false"]')
-    ];
-
-    return candidates.reduce((maxOverlapWidth, element) => {
-      if (!isVisibleElement(element)) {
-        return maxOverlapWidth;
-      }
-
-      const rect = element.getBoundingClientRect();
-
-      if (isFullPlayerOverlay(rect, layoutRect)) {
-        return maxOverlapWidth;
-      }
-
-      const overlapWidth = getHorizontalOverlapWidth(rect, layoutRect);
-
-      return Math.max(maxOverlapWidth, overlapWidth);
-    }, 0);
-  }
-
-  function isFullPlayerOverlay(rect, layoutRect) {
-    return rect.width >= layoutRect.width * 0.9 && rect.height >= layoutRect.height * 0.9;
-  }
-
-  function getHorizontalOverlapWidth(rect, targetRect) {
-    const overlapLeft = Math.max(rect.left, targetRect.left);
-    const overlapRight = Math.min(rect.right, targetRect.right);
-
-    return Math.max(0, overlapRight - overlapLeft);
+    return !element.matches(SIDE_BAR_SELECTOR);
   }
 
   function getContentBoxWidth(element) {

@@ -1,0 +1,248 @@
+/*!
+ * Copyright (C) 2022-2023 DAZN Group.
+ *
+ * All rights reserved. Not be used under any circumstances
+ * without express permission.
+ *
+ * It is prohibited to reverse engineer, decompile, translate,
+ * disassemble, decipher, decrypt, or otherwise attempt to
+ * discover the source code of this software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+ * REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+ * INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+ * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+ * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ * PERFORMANCE OF THIS SOFTWARE.
+ */
+@keyframes _1izatxk1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes _1izatxk3 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+._1izatxk0 {
+  direction: ltr;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+._1izatxk2 {
+  animation-name: _1izatxk1;
+}
+._1izatxk4 {
+  animation-name: _1izatxk3;
+}
+._1izatxk5 {
+  visibility: hidden;
+}
+._1izatxk6 {
+  box-sizing: border-box;
+  padding: 8px;
+  min-width: 115px;
+  max-width: 285px;
+  height: 50px;
+  right: 30px;
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #F9FAFA0C;
+  border-radius: 15px;
+  cursor: pointer;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  font-family: DAZNTrim;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F9FAFA;
+  transition: border-color 150ms;
+  background: linear-gradient(276deg, rgba(247, 255, 26, 0.15) 16.13%, rgba(247, 255, 26, 0.00) 53.12%), rgba(36, 45, 51, 0.60);
+}
+._1izatxk6:hover {
+  border: 1px solid #F9FAFA;
+}
+._1izatxk7 {
+  max-width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+._1izatxk8 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #3D4549;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #F9FAFA0C;
+  transition: border-color 150ms;
+}
+._1izatxk8:hover {
+  border: 1px solid #F9FAFA;
+}
+.sw483t0 {
+  direction: rtl;
+}
+@keyframes _13xcyvr1 {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes _13xcyvr3 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+@keyframes _13xcyvrd {
+  from {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
+}
+._13xcyvr0 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  display: flex;
+  background-color: #0C161CCC;
+  color: #F9FAFA;
+  flex: 0 1 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+._13xcyvr2 {
+  animation-name: _13xcyvr1;
+}
+._13xcyvr4 {
+  animation-name: _13xcyvr3;
+}
+._13xcyvr5 {
+  visibility: hidden;
+}
+._13xcyvr6 {
+  height: 100%;
+  float: right;
+  padding: 4px 8px;
+  min-width: 90px;
+  max-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._13xcyvr7 {
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+._13xcyvr8 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: DAZNOscine, Oscine, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-inline-start: 20px;
+  padding-inline-end: 8px;
+}
+._13xcyvr9 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  font-weight: 700;
+  font-family: DAZNOscine, Oscine, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+._13xcyvra {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #949EFF;
+  text-transform: uppercase;
+  color: #0C161C;
+}
+._13xcyvrb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #3D4549;
+  padding: 4px;
+  color: #B3B9BB;
+  font-weight: 700;
+  font-size: 24px;
+}
+._13xcyvrc {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #F9FAFA;
+  font-size: 24px;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+._13xcyvrc::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: 
+      linear-gradient(to right,
+        #0C161CCC 0px,
+        transparent 20px,
+        transparent calc(100% - 20px),
+        #0C161CCC 100%
+      )
+    ;
+}
+._13xcyvre {
+  display: inline-block;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: _13xcyvrd;
+  padding: 0 50px;
+}
+._13xcyvrf {
+  color: #F7FF1A;
+  font-size: 34px;
+  padding: 0 96px;
+}
+
+/*# sourceMappingURL=style.css.map*/

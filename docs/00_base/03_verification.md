@@ -48,6 +48,9 @@
 | 6 | リサイズやページ内遷移後にも再適用される | ウィンドウリサイズ、別動画への遷移で確認 | 未確認 | `MutationObserver`、`resize`、`loadedmetadata` で対応 |
 | 7 | サイドメニュー / 右側パネル展開時に動画左端が見切れない | DAZNログイン後再生ページでサイドメニューを展開して目視確認 | 成功 | 2026-06-15 ユーザ実機確認OK |
 | 8 | サイドメニュー / 右側パネルが動画にかぶらない | DAZNログイン後再生ページでサイドメニューを展開して目視確認 | 成功 | 2026-06-15 ユーザ実機確認OK |
+| 9 | ヘッダーが画面上部に固定追従しない | DAZN動画再生ページでスクロールまたは表示変化を目視確認 | 未確認 | CSSで `position: static` と `top: auto` を適用し、static時は高さ計算から除外 |
+| 10 | サイドメニューホバー時の「すべて表示する」で動画プレイヤーサイズが変わらない | サイドメニュー項目へホバーして目視確認 | 未確認 | 右端固定ボタンなど `position: fixed/absolute` の兄弟要素を幅計算から除外 |
+| 11 | マウスホバーなしでも動画プレイヤー幅が高速に広い/狭いを繰り返さない | DAZN動画再生ページで数秒間目視確認 | 未確認 | 幅計算のフィードバックループを避ける |
 
 ## タスク別完了確認
 
@@ -65,6 +68,20 @@
 | 2 | `node --check app/content.js` | content scriptの構文確認 | 成功 | 出力なし |
 | 3 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | サイドメニュー干渉修正後のmanifest JSON構文確認 | 成功 | 2026-06-15再確認。出力なし |
 | 4 | `node --check app/content.js` | サイドメニュー干渉修正後のcontent script構文確認 | 成功 | 2026-06-15再確認。出力なし |
+| 5 | `node --check app/content.js` | サイドメニューホバー干渉修正後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 6 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | サイドメニューホバー干渉修正後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 7 | `node --check app/content.js` | サイドメニューホバー時のチラつき修正後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 8 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | サイドメニューホバー時のチラつき修正後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 9 | `node --check app/content.js` | 幅の高速切り替わり修正後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 10 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | 幅の高速切り替わり修正後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 11 | `node --check app/content.js` | ホバー文字列による幅縮小の再修正後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 12 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | ホバー文字列による幅縮小の再修正後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 13 | `node --check app/content.js` | サイドメニューホバー時のサイドバー幅固定後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 14 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | サイドメニューホバー時のサイドバー幅固定後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 15 | `node --check app/content.js` | expandButtonTooltip押し出し修正後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 16 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | expandButtonTooltip押し出し修正後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 17 | `node --check app/content.js` | fixed/absolute要素の幅計算除外後のcontent script構文確認 | 成功 | 2026-06-17再確認。出力なし |
+| 18 | `node -e "JSON.parse(require('fs').readFileSync('app/manifest.json', 'utf8'))"` | fixed/absolute要素の幅計算除外後のmanifest JSON構文確認 | 成功 | 2026-06-17再確認。出力なし |
 
 ## 手動確認
 
@@ -78,6 +95,9 @@
 | 6 | ページ内遷移確認 | 別動画や別ページへ遷移して戻る | `video` 検出後に再適用される | 未実施 | SPA遷移対策 |
 | 7 | サイドメニュー展開確認 | DAZNログイン後再生ページでサイドメニュー / 右側パネルを展開する | 動画左端が見切れず、メニューが動画へかぶらない | 成功 | 2026-06-15 ユーザ実機確認OK |
 | 8 | サイドメニュー開閉追従確認 | サイドメニュー / 右側パネルを開閉する | 開閉後にプレイヤー幅が再計算される | 成功 | 2026-06-15 ユーザ実機確認OK |
+| 9 | ヘッダー固定解除確認 | DAZN動画再生ページでスクロールまたは表示変化を確認する | ヘッダーが画面上部に固定追従しない | 未実施 | 2026-06-15 CSS変更後、実機確認待ち |
+| 10 | サイドメニューホバー確認 | サイドメニュー項目へホバーして「すべて表示する」を表示する | ホバー文字列が出ても動画プレイヤーサイズが変わらず、チラつかない | 未実施 | 文字列が動画にかぶるのは許容 |
+| 11 | 幅安定確認 | マウスを動かさずDAZN動画再生ページを数秒間見る | プレイヤー幅が広い/狭いを高速に繰り返さない | 未実施 | ユーザ実機確認待ち |
 
 ## 既存機能への影響確認
 
