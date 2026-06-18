@@ -4,16 +4,58 @@ html.dazn-wide-player-root .dazn-wide-player-candidate {
 
 html.dazn-wide-player-root [data-test-id="HEADER"],
 html.dazn-wide-player-root header {
-  position: static !important;
-  top: auto !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 2147483647 !important;
+  opacity: 0 !important;
+  transform: translateY(-100%) !important;
+  transition: opacity 160ms ease, transform 160ms ease !important;
+  pointer-events: none !important;
 }
 
-html.dazn-wide-player-root [data-test-id="SIDE_BAR"] {
-  width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  min-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  max-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  flex-basis: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  overflow: visible !important;
+html.dazn-wide-player-root.dazn-wide-player-header-hover [data-test-id="HEADER"],
+html.dazn-wide-player-root.dazn-wide-player-header-hover header {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+html.dazn-wide-player-root {
+  --dazn-wide-player-top-gap: 12px;
+}
+
+html.dazn-wide-player-root body,
+html.dazn-wide-player-root [data-isnative],
+html.dazn-wide-player-root main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+html.dazn-wide-player-root main > *:has(> [data-target="player-layout"]) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  gap: 0 !important;
+}
+
+html.dazn-wide-player-root [data-target="player-layout"] {
+  margin-top: var(--dazn-wide-player-top-gap) !important;
+}
+
+html.dazn-wide-player-root [data-test-id="SIDE_BAR"],
+html.dazn-wide-player-root [class*="expand-match-day-panel-container"],
+html.dazn-wide-player-root [class*="expandButtonTooltip"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  flex-basis: 0 !important;
+  overflow: hidden !important;
 }
 
 html.dazn-wide-player-root [data-target="player-layout"] {
