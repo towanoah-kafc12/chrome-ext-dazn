@@ -1,14 +1,17 @@
 (() => {
   const ROOT_CLASS = "dazn-wide-player-root";
+  const HEADER_HOVER_CLASS = "dazn-wide-player-header-hover";
   const PLAYER_CLASS = "dazn-wide-player";
   const CANDIDATE_CLASS = "dazn-wide-player-candidate";
   const MAX_PARENT_STEPS = 6;
   const DEFAULT_ASPECT_RATIO = 16 / 9;
   const MIN_PLAYER_WIDTH = 320;
+  const TOP_PLAYER_GAP = 12;
   const PLAYER_LAYOUT_SELECTOR = '[data-target="player-layout"]';
   const SIDE_BAR_SELECTOR = '[data-test-id="SIDE_BAR"]';
   let scheduled = false;
   let lockedSideBarWidth = 0;
+  let hideHeaderTimer = 0;
 
   function scheduleApply() {
     if (scheduled) {
@@ -46,7 +49,7 @@
 
   function updateSizingVariables(video) {
     const headerHeight = getHeaderHeight();
-    const availableHeight = Math.max(window.innerHeight - headerHeight, MIN_PLAYER_WIDTH);
+    const availableHeight = Math.max(window.innerHeight - headerHeight - TOP_PLAYER_GAP, MIN_PLAYER_WIDTH);
     const aspectRatio = getVideoAspectRatio(video);
     const maxWidthByHeight = Math.floor(availableHeight * aspectRatio);
     const usableLayoutWidth = getUsablePlayerLayoutWidth(video);
@@ -81,18 +84,7 @@
   }
 
   function getHeaderHeight() {
-    const header = document.querySelector('[data-test-id="HEADER"], header');
-
-    if (!header || isStaticHeader(header)) {
-      return 0;
-    }
-
-    const rect = header.getBoundingClientRect();
-    return Math.max(0, Math.ceil(rect.height));
-  }
-
-  function isStaticHeader(header) {
-    return window.getComputedStyle(header).position === "static";
+    return 0;
   }
 
   function getVideoAspectRatio(video) {
@@ -205,6 +197,34 @@
     return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0";
   }
 
+  function updateHeaderHoverState(event) {
+    if (window.innerWidth <= 0) {
+      return;
+    }
+
+    if (event.clientY <= getHeaderHoverZoneHeight()) {
+      showHeaderTemporarily();
+    }
+  }
+
+  function getHeaderHoverZoneHeight() {
+    const header = document.querySelector('[data-test-id="HEADER"], header');
+
+    if (!header) {
+      return 48;
+    }
+
+    return Math.max(48, Math.min(96, Math.ceil(header.getBoundingClientRect().height)));
+  }
+
+  function showHeaderTemporarily() {
+    document.documentElement.classList.add(HEADER_HOVER_CLASS);
+    window.clearTimeout(hideHeaderTimer);
+    hideHeaderTimer = window.setTimeout(() => {
+      document.documentElement.classList.remove(HEADER_HOVER_CLASS);
+    }, 700);
+  }
+
   function markLikelyPlayerContainers(video) {
     let current = video.parentElement;
     let steps = 0;
@@ -252,6 +272,7 @@
 
   window.addEventListener("resize", scheduleApply, { passive: true });
   window.addEventListener("loadedmetadata", scheduleApply, true);
+  window.addEventListener("mousemove", updateHeaderHoverState, { passive: true });
   document.addEventListener("transitionend", scheduleApply, true);
   scheduleApply();
 })();
