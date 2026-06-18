@@ -10,7 +10,6 @@
   const PLAYER_LAYOUT_SELECTOR = '[data-target="player-layout"]';
   const SIDE_BAR_SELECTOR = '[data-test-id="SIDE_BAR"]';
   let scheduled = false;
-  let lockedSideBarWidth = 0;
   let hideHeaderTimer = 0;
 
   function scheduleApply() {
@@ -36,7 +35,6 @@
       }
 
       updateSizingVariables(videos[0]);
-      updateSideBarVariables();
 
       for (const video of videos) {
         video.classList.add(PLAYER_CLASS);
@@ -67,20 +65,6 @@
     }
 
     document.documentElement.style.setProperty(name, value);
-  }
-
-  function updateSideBarVariables() {
-    const sideBar = document.querySelector(SIDE_BAR_SELECTOR);
-
-    if (!sideBar) {
-      return;
-    }
-
-    if (lockedSideBarWidth === 0) {
-      lockedSideBarWidth = Math.max(MIN_PLAYER_WIDTH / 8, Math.ceil(getElementWidth(sideBar)));
-    }
-
-    setRootCssVariable("--dazn-wide-player-sidebar-width", `${lockedSideBarWidth}px`);
   }
 
   function getHeaderHeight() {

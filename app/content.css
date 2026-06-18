@@ -44,12 +44,18 @@ html.dazn-wide-player-root [data-target="player-layout"] {
   margin-top: var(--dazn-wide-player-top-gap) !important;
 }
 
-html.dazn-wide-player-root [data-test-id="SIDE_BAR"] {
-  width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  min-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  max-width: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  flex-basis: var(--dazn-wide-player-sidebar-width, 72px) !important;
-  overflow: visible !important;
+html.dazn-wide-player-root [data-test-id="SIDE_BAR"],
+html.dazn-wide-player-root [class*="expand-match-day-panel-container"],
+html.dazn-wide-player-root [class*="expandButtonTooltip"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  flex-basis: 0 !important;
+  overflow: hidden !important;
 }
 
 html.dazn-wide-player-root [data-target="player-layout"] {
