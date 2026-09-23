@@ -86,6 +86,11 @@ html.dazn-wide-player-root.dazn-wide-player-fullscreen .dazn-wide-player {
   margin-right: 0 !important;
 }
 
+html.dazn-wide-player-root.dazn-wide-player-fullscreen .dazn-wide-player,
+html.dazn-wide-player-root.dazn-wide-player-fullscreen .dazn-wide-player-candidate {
+  border-radius: 0 !important;
+}
+
 html.dazn-wide-player-root video.dazn-wide-player {
   display: block !important;
   height: auto !important;
