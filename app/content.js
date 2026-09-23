@@ -1,5 +1,6 @@
 (() => {
   const ROOT_CLASS = "dazn-wide-player-root";
+  const FULLSCREEN_CLASS = "dazn-wide-player-fullscreen";
   const HEADER_HOVER_CLASS = "dazn-wide-player-header-hover";
   const PLAYER_CLASS = "dazn-wide-player";
   const CANDIDATE_CLASS = "dazn-wide-player-candidate";
@@ -28,13 +29,16 @@
     try {
       const videos = Array.from(document.querySelectorAll("video"));
 
+      const isFullscreen = document.fullscreenElement !== null;
+
       document.documentElement.classList.toggle(ROOT_CLASS, videos.length > 0);
+      document.documentElement.classList.toggle(FULLSCREEN_CLASS, isFullscreen);
 
       if (videos.length === 0) {
         return;
       }
 
-      updateSizingVariables(videos[0]);
+      updateSizingVariables(videos[0], isFullscreen);
 
       for (const video of videos) {
         video.classList.add(PLAYER_CLASS);
@@ -45,15 +49,17 @@
     }
   }
 
-  function updateSizingVariables(video) {
+  function updateSizingVariables(video, isFullscreen) {
     const headerHeight = getHeaderHeight();
-    const availableHeight = Math.max(window.innerHeight - headerHeight - TOP_PLAYER_GAP, MIN_PLAYER_WIDTH);
+    const playerGap = isFullscreen ? 0 : TOP_PLAYER_GAP;
+    const availableHeight = Math.max(window.innerHeight - headerHeight - playerGap, MIN_PLAYER_WIDTH);
     const aspectRatio = getVideoAspectRatio(video);
     const maxWidthByHeight = Math.floor(availableHeight * aspectRatio);
-    const usableLayoutWidth = getUsablePlayerLayoutWidth(video);
+    const usableLayoutWidth = isFullscreen ? window.innerWidth : getUsablePlayerLayoutWidth(video);
     const playerWidth = Math.max(MIN_PLAYER_WIDTH, Math.floor(Math.min(usableLayoutWidth, maxWidthByHeight)));
 
     setRootCssVariable("--dazn-wide-player-header-height", `${headerHeight}px`);
+    setRootCssVariable("--dazn-wide-player-top-gap", `${playerGap}px`);
     setRootCssVariable("--dazn-wide-player-available-height", `${availableHeight}px`);
     setRootCssVariable("--dazn-wide-player-width", `${playerWidth}px`);
     setRootCssVariable("--dazn-wide-player-half-width", `${playerWidth / 2}px`);
@@ -255,6 +261,7 @@
   });
 
   window.addEventListener("resize", scheduleApply, { passive: true });
+  document.addEventListener("fullscreenchange", scheduleApply);
   window.addEventListener("loadedmetadata", scheduleApply, true);
   window.addEventListener("mousemove", updateHeaderHoverState, { passive: true });
   document.addEventListener("transitionend", scheduleApply, true);

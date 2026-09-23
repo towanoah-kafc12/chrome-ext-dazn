@@ -72,6 +72,20 @@ html.dazn-wide-player-root .dazn-wide-player {
   margin-right: auto !important;
 }
 
+html.dazn-wide-player-root.dazn-wide-player-fullscreen [data-target="player-layout"] {
+  width: var(--dazn-wide-player-width, 100vw) !important;
+  min-width: var(--dazn-wide-player-width, 100vw) !important;
+  max-width: var(--dazn-wide-player-width, 100vw) !important;
+  flex-basis: var(--dazn-wide-player-width, 100vw) !important;
+}
+
+html.dazn-wide-player-root.dazn-wide-player-fullscreen .dazn-wide-player {
+  width: var(--dazn-wide-player-width, 100vw) !important;
+  max-width: var(--dazn-wide-player-width, 100vw) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 html.dazn-wide-player-root video.dazn-wide-player {
   display: block !important;
   height: auto !important;
