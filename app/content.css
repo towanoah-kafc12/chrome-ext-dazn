@@ -42,6 +42,8 @@ html.dazn-wide-player-root main > *:has(> [data-target="player-layout"]) {
 
 html.dazn-wide-player-root [data-target="player-layout"] {
   margin-top: var(--dazn-wide-player-top-gap) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 html.dazn-wide-player-root [data-test-id="SIDE_BAR"],

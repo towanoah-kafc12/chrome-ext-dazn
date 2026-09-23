@@ -7,7 +7,7 @@
   const MAX_PARENT_STEPS = 6;
   const DEFAULT_ASPECT_RATIO = 16 / 9;
   const MIN_PLAYER_WIDTH = 320;
-  const TOP_PLAYER_GAP = 12;
+  const TOP_PLAYER_GAP = 0;
   const PLAYER_LAYOUT_SELECTOR = '[data-target="player-layout"]';
   const SIDE_BAR_SELECTOR = '[data-test-id="SIDE_BAR"]';
   let scheduled = false;
@@ -156,11 +156,9 @@
       return 0;
     }
 
-    const style = window.getComputedStyle(element);
-    const paddingLeft = parsePixelValue(style.paddingLeft);
-    const paddingRight = parsePixelValue(style.paddingRight);
-
-    return Math.max(0, rect.width - paddingLeft - paddingRight);
+    // プレイヤーは親要素の外幅まで使う。通常表示で親の左右paddingを
+    // 差し引くと、映像の左右に不要な黒い余白が残る。
+    return rect.width;
   }
 
   function getElementWidth(element) {
